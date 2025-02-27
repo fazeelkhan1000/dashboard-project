@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+.mg-h2 {
+  margin: 0.5rem 0rem;
+}
+.span-text {
+  font-weight: 500;
+  font-size: 24px;
+}
+.span-text-funnel {
+  font-weight: 500;
+  font-size: 24px;
+  margin: 0.5rem 0rem;
+}
+.head-div {
+  margin-bottom: 2rem;
+}
+.container-div {
+  min-width: 600px;
+  margin: auto;
+  border: 1px solid grey;
+  border-radius: 24px;
+  padding: 24px;
+}
+.one-third {
+  width: 33.3%;
+  padding: 0rem 2rem;
+}
+.funnel-main {
+  position: relative;
+  margin: auto;
+  border: 1px solid grey;
+  border-radius: 24px;
+  padding: 2rem 0rem;
+}
+.clr-black {
+  color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.chart-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.funnel-main::before,
+.funnel-main::after {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  bottom: 2rem;
+  width: 2px; /* Line thickness */
+  background-color: #ccc; /* Line color */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.funnel-main::before {
+  left: 33.3%; /* First line at 33% */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.funnel-main::after {
+  left: 66.6%; /* Second line at 665px */
 }
