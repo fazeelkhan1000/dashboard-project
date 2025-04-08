@@ -83,7 +83,7 @@ const Dashboard = () => {
         <h1>Dashboard</h1>
       <FunnelChart/>
       {/* <SankeyChart/> */}
-      <div style={{ display: "flex", width: "100%", justifyContent: "center" }}>
+      <div style={{ display: "flex", width: "100%", justifyContent: "space-between", marginTop: '1rem' }}>
         {charts.map((chart) => (
           <DraggableChart key={chart.id} chart={chart} onDrop={handleDrop} />
         ))}
